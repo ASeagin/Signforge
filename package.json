@@ -1,27 +1,27 @@
 {
-  "name": "util-deprecate",
-  "version": "1.0.2",
-  "description": "The Node.js `util.deprecate()` function with browser support",
-  "main": "node.js",
-  "browser": "browser.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/TooTallNate/util-deprecate.git"
-  },
-  "keywords": [
-    "util",
-    "deprecate",
-    "browserify",
-    "browser",
-    "node"
-  ],
-  "author": "Nathan Rajlich <nathan@tootallnate.net> (http://n8.io/)",
+  "name": "unpipe",
+  "description": "Unpipe a stream from all destinations",
+  "version": "1.0.0",
+  "author": "Douglas Christopher Wilson <doug@somethingdoug.com>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/TooTallNate/util-deprecate/issues"
+  "repository": "stream-utils/unpipe",
+  "devDependencies": {
+    "istanbul": "0.3.15",
+    "mocha": "2.2.5",
+    "readable-stream": "1.1.13"
   },
-  "homepage": "https://github.com/TooTallNate/util-deprecate"
+  "files": [
+    "HISTORY.md",
+    "LICENSE",
+    "README.md",
+    "index.js"
+  ],
+  "engines": {
+    "node": ">= 0.8"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec --bail --check-leaks test/",
+    "test-cov": "istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot --check-leaks test/",
+    "test-travis": "istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter spec --check-leaks test/"
+  }
 }
